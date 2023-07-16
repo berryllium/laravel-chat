@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .message {
+
+    }
+    .right {
+        @apply text-white bg-blue-400 text-right p-2 mt-2 w-3/4 float-right
+    }
+    .left {
+        @apply bg-lime-300 text-left p-2 mt-2 w-3/4 float-left
+    }
+}
