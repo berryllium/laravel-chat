@@ -12,4 +12,9 @@
     .left {
         @apply bg-lime-300 text-left p-2 mt-2 w-3/4 float-left
     }
+    .chat {
+        @apply container mx-auto;
+        height: calc(100vh - 185px);
+    }
 }
+
