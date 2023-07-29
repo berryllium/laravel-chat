@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @layer utilities {
-    .message {
-
+    .button {
+        @apply text-white bg-blue-400 py-2 px-5
     }
     .right {
         @apply text-white bg-blue-400 text-right p-2 mt-2 w-3/4 float-right
