@@ -7,7 +7,7 @@
             <div class="name flex-1 text-center -ml-2"><span>{{ $contact->name }}</span></div>
         </div>
         <div class="p-6 text-gray-900">
-            <div class="chat">
+            <div id="chat" class="chat" data-socket-url="{{ env('APP_URL') }}:3000">
                 <ul id="messages" class="p-5 mb-5 overflow-y-auto text-lg border border-gray-300 h-4/5 bg-white">
                     @foreach($messages as $message)
                         <li data-id="{{ $message->id }}" class="{{ $message->from == $contact->id ? 'left' : 'right' }}">{{ $message->message }}</li>

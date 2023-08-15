@@ -2,6 +2,7 @@ import axios from "axios";
 
 const messages = document.getElementById('messages')
 const form = document.getElementById('sendForm')
+const socketUrl = document.querySelector('#chat').dataset.socketUrl
 messages.scrollTop = messages.scrollHeight;
 
 document.getElementById('text').addEventListener('keyup', function(event) {
@@ -30,7 +31,8 @@ function send() {
 
 import io from 'socket.io-client';
 
-let socket = io.connect('http://localhost:3000', {query: {userId: form.dataset.from}});
+console.log(socketUrl)
+let socket = io.connect(socketUrl, {query: {userId: form.dataset.from}});
 socket.on('connection', function () {
     console.log('Connected to server');
 });
